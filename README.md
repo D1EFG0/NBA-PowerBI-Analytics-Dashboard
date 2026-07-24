@@ -1,9 +1,32 @@
 # 🏀 NBA Power BI Analytics Dashboard
 
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
+![DAX](https://img.shields.io/badge/DAX-0078D4?style=for-the-badge)
+
+![Power Query](https://img.shields.io/badge/Power_Query-217346?style=for-the-badge)
+
+![Business Intelligence](https://img.shields.io/badge/Business_Intelligence-blue?style=for-the-badge)
+
+![Sports Analytics](https://img.shields.io/badge/Sports_Analytics-red?style=for-the-badge)
+
+
 An interactive Power BI dashboard analyzing the **2024–2025 NBA season** using business intelligence best practices.
 
 This project demonstrates the complete BI workflow from raw data transformation to executive reporting using Power BI.
 
+
+## Table of Contents
+
+- Project Overview
+- Dashboard Preview
+- Data Model
+- DAX Showcase
+- ETL Workflow
+- Solution Architecture
+- Technologies
+- Business Questions
+- Skills Demonstrated
 ---
 
 # Dashboard Preview

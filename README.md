@@ -18,15 +18,15 @@ This project demonstrates the complete BI workflow from raw data transformation 
 
 ## Table of Contents
 
-- Project Overview
-- Dashboard Preview
-- Data Model
-- DAX Showcase
-- ETL Workflow
-- Solution Architecture
-- Technologies
-- Business Questions
-- Skills Demonstrated
+- [Project Overview](#project-overview)
+- [Dashboard Preview](#dashboard-preview)
+- [Data Model](#data-model)
+- [DAX Showcase](#dax-showcase)
+- [Data Preparation and ETL](#data-preparation-and-etl)
+- [Solution Architecture](#solution-architecture)
+- [Technologies](#technologies)
+- [Business Questions](#business-questions)
+- [Skills Demonstrated](#skills-demonstrated)
 ---
 
 # Dashboard Preview

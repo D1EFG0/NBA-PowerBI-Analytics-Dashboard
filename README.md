@@ -24,6 +24,168 @@ The dashboard is built using a dimensional star schema to support scalable repor
 
 The dashboard uses custom DAX measures to calculate advanced basketball analytics while avoiding duplicate aggregation and ensuring accurate business reporting.
 
+### Highest Scoring Team
+
+```DAX
+Highest Scoring Team = 
+VAR TeamTable =
+    TOPN(
+        1,
+        ALL(Dim_Team[Tm]),
+        [Team PPG],
+        DESC
+    )
+RETURN
+    MAXX(TeamTable, Dim_Team[Tm])
+```
+
+**Purpose**
+
+Identifies the highest-scoring team in the league by ranking all teams using the `Team PPG` measure.
+
+**DAX concepts demonstrated**
+
+- `TOPN` for ranking
+- `ALL` to remove the current team filter
+- `MAXX` to return the team abbreviation from the virtual table
+- Variables for clearer and more maintainable logic
+
+---
+
+### Top Scoring Player
+
+```DAX
+Top Scoring Player = 
+VAR TopPlayer =
+    TOPN(
+        1,
+        ALL(Dim_Player[Player]),
+        [PPG],
+        DESC
+    )
+RETURN
+    MAXX(TopPlayer, Dim_Player[Player])
+```
+
+**Purpose**
+
+Returns the league’s leading scorer by evaluating every player against the `PPG` measure.
+
+**DAX concepts demonstrated**
+
+- Dynamic player ranking
+- Filter-context removal with `ALL`
+- Virtual tables created with `TOPN`
+- Iterator logic using `MAXX`
+
+---
+
+### Dynamic Executive Dashboard Highlights
+
+```DAX
+Executive Dashboard Highlights = 
+VAR TopScoringTeam =
+    [Highest Scoring Team]
+
+VAR TopTeamPPG =
+    MAXX(
+        TOPN(
+            1,
+            ALL(Dim_Team[Tm]),
+            [Team PPG],
+            DESC
+        ),
+        [Team PPG]
+    )
+
+VAR BestFGTeam =
+    [Best FG% Team]
+
+VAR BestFGValue =
+    MAXX(
+        TOPN(
+            1,
+            ALL(Dim_Team[Tm]),
+            [Team FG%],
+            DESC
+        ),
+        [Team FG%]
+    )
+
+VAR Best3PTTeam =
+    [Best 3PT% Team]
+
+VAR Best3PTValue =
+    MAXX(
+        TOPN(
+            1,
+            ALL(Dim_Team[Tm]),
+            [Team 3PT%],
+            DESC
+        ),
+        [Team 3PT%]
+    )
+
+VAR TopPlayer =
+    [Top Scoring Player]
+
+VAR TopPlayerPPG =
+    MAXX(
+        TOPN(
+            1,
+            ALL(Dim_Player[Player]),
+            [PPG],
+            DESC
+        ),
+        [PPG]
+    )
+
+VAR PlayerCount =
+    [Total Players]
+
+RETURN
+    "• " & TopScoringTeam
+        & " leads the league in scoring at "
+        & FORMAT(TopTeamPPG, "0.0")
+        & " PPG."
+        & UNICHAR(10)
+        & "• " & BestFGTeam
+        & " has the league’s highest field-goal percentage at "
+        & FORMAT(BestFGValue, "0.0%")
+        & "."
+        & UNICHAR(10)
+        & "• " & Best3PTTeam
+        & " leads the league in three-point percentage at "
+        & FORMAT(Best3PTValue, "0.0%")
+        & "."
+        & UNICHAR(10)
+        & "• " & TopPlayer
+        & " is the leading scorer at "
+        & FORMAT(TopPlayerPPG, "0.0")
+        & " PPG."
+        & UNICHAR(10)
+        & "• The report analyzes "
+        & FORMAT(PlayerCount, "#,0")
+        & " players from the 2024–2025 NBA season."
+```
+
+**Purpose**
+
+Generates a dynamic executive summary that automatically updates league leaders, efficiency metrics, scoring statistics, and player counts based on the current data model.
+
+**DAX concepts demonstrated**
+
+- Reusable measures
+- Variables for modular business logic
+- Virtual tables with `TOPN`
+- Iterators using `MAXX`
+- Filter-context control with `ALL`
+- Dynamic text concatenation
+- Numeric and percentage formatting with `FORMAT`
+- Multi-line narrative output using `UNICHAR(10)`
+
+This measure turns analytical results into executive-ready commentary rather than displaying isolated KPIs only.
+
 ### Team Points Per Game
 
 ```DAX

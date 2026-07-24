@@ -16,6 +16,25 @@ The Executive Dashboard provides a high-level overview of league performance, hi
 
 ---
 
+## Data Model
+
+The dashboard is built using a dimensional star schema to support scalable reporting and efficient DAX calculations.
+
+### Model Components
+
+- **Fact_Team_Game** – Stores team-level game statistics.
+- **Dim_Player** – Player dimension used for player-level analysis.
+- **Dim_Team** – Team dimension used throughout the report.
+- **Dim_Date** – Calendar dimension enabling time-series analysis.
+- **Measures_Table** – Centralized repository for reusable DAX measures.
+- **Team Metrics** – Supporting table used for metric selection and report flexibility.
+
+This model separates facts from dimensions, improving report performance, simplifying relationships, and following Business Intelligence best practices.
+
+![Data Model](images/data-model.png)
+
+
+
 ## Player Analysis
 
 ![Player Analysis](images/player-analysis.png)

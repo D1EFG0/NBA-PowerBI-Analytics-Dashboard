@@ -20,6 +20,54 @@ The Executive Dashboard provides a high-level overview of league performance, hi
 
 The dashboard is built using a dimensional star schema to support scalable reporting and efficient DAX calculations.
 
+## DAX Showcase
+
+The dashboard uses custom DAX measures to calculate advanced basketball analytics while avoiding duplicate aggregation and ensuring accurate business reporting.
+
+### Team Points Per Game
+
+```DAX
+Team PPG =
+AVERAGEX(
+    SUMMARIZE(
+        Fact_Team_Game,
+        Fact_Team_Game[Tm],
+        Fact_Team_Game[Date],
+        "GamePts", SUM(Fact_Team_Game[Team_PTS])
+    ),
+    [GamePts]
+)
+```
+
+**Purpose**
+
+Calculates each team's average points per game by first aggregating points at the game level and then averaging those totals. This approach prevents duplicate aggregation and produces accurate team-level statistics.
+
+---
+
+### Games Played
+
+```DAX
+Games Played =
+DISTINCTCOUNT(Fact_Team_Game[GameKey])
+```
+
+**Purpose**
+
+Calculates the number of unique games played for the selected player or team using a distinct game identifier.
+
+---
+
+### Dynamic Executive Dashboard Insight
+
+```DAX
+Executive Dashboard Highlights
+```
+
+**Purpose**
+
+Generates dynamic narrative insights for the Executive Dashboard using DAX variables and text functions, automatically updating key business insights based on report calculations.
+
 ### Model Components
 
 - **Fact_Team_Game** – Stores team-level game statistics.

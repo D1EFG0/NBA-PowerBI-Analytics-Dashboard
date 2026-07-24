@@ -2,89 +2,74 @@
 
 An interactive Power BI dashboard analyzing the **2024–2025 NBA season** using business intelligence best practices.
 
-This project demonstrates the complete BI workflow from raw data transformation to interactive executive reporting.
+This project demonstrates the complete BI workflow from raw data transformation to executive reporting using Power BI.
 
 ---
 
-# Project Overview
-
-This dashboard was built to provide insights into:
-
-- Player performance
-- Team efficiency
-- League-wide trends
-- Executive-level KPIs
-- Interactive analytics
-
-The report was designed following business intelligence principles using Power BI.
-
----
-
-# Dashboard Pages
+# Dashboard Preview
 
 ## Executive Dashboard
 
-Provides an executive summary of the league including:
+![Executive Dashboard](images/executive-dashboard.png)
 
-- Highest scoring team
-- Best shooting team
-- Best 3PT team
-- League averages
-- Top scorer
-- Executive insights
+The Executive Dashboard provides a high-level overview of league performance, highlighting the highest-scoring team, best shooting teams, league averages, player totals, and executive insights.
 
 ---
 
 ## Player Analysis
 
-Interactive player exploration including:
+![Player Analysis](images/player-analysis.png)
 
-- PPG
-- RPG
-- APG
-- FG%
-- 3PT%
-- FT%
-- Minutes per game
-- Games played
-- Points trend by game
+Analyze individual player performance through interactive filtering, KPIs, and game-by-game scoring trends.
+
+Features include:
+
+- Points Per Game
+- Rebounds Per Game
+- Assists Per Game
+- Shooting Percentages
+- Minutes Per Game
+- Games Played
+- Dynamic scoring trend
 
 ---
 
 ## Team Analysis
 
-Compare every NBA team using:
+![Team Analysis](images/team-analysis.png)
 
-- Team scoring
-- Shooting efficiency
-- Team rankings
-- Historical scoring trends
+Compare every NBA team using interactive team selection, league rankings, and historical scoring trends.
 
 ---
 
 ## League Analysis
 
-League-wide visualization including:
+![League Analysis](images/league-analysis.png)
 
-- Scoring Efficiency Scatter Plot
-- Top FG% Teams
-- Top 3PT% Teams
-- Interactive report page tooltips
+Explore league-wide relationships using scatter plots, custom report page tooltips, and efficiency rankings.
+
+---
+
+# Project Overview
+
+The objective of this project was to build a complete Business Intelligence solution capable of transforming raw NBA game data into actionable insights for coaches, analysts, and executives.
+
+The report emphasizes clean design, intuitive navigation, interactive exploration, and executive-level reporting.
 
 ---
 
 # Skills Demonstrated
 
-- Power BI
+- Microsoft Power BI
 - DAX
 - Power Query
-- Data Modeling
-- Star Schema Design
+- Star Schema Data Modeling
+- KPI Design
 - Interactive Dashboards
 - Report Page Tooltips
-- KPI Design
-- Business Intelligence Reporting
 - Data Visualization
+- Business Intelligence Reporting
+- Sports Analytics
 
 ---
 
@@ -93,42 +78,57 @@ League-wide visualization including:
 - Microsoft Power BI
 - Power Query
 - DAX
-- NBA Dataset (2024–2025 Season)
+- NBA 2024–2025 Season Dataset
+
+---
+
+# Business Questions Answered
+
+- Which team has the highest scoring offense?
+- Which teams shoot most efficiently?
+- Who are the league's top scorers?
+- How does shooting efficiency relate to offensive production?
+- How has player scoring changed throughout the season?
+- How do teams compare across key offensive metrics?
 
 ---
 
 # Project Highlights
 
-✔ Executive dashboard
+✅ Executive Dashboard
 
-✔ Interactive filtering
+✅ Interactive Player Analytics
 
-✔ Dynamic KPIs
+✅ Team Performance Dashboard
 
-✔ Custom report page tooltips
+✅ League Analysis Dashboard
 
-✔ Player performance trends
+✅ Dynamic DAX Measures
 
-✔ Team efficiency analysis
+✅ Custom Report Page Tooltips
 
-✔ League-wide insights
+✅ Interactive Filtering
+
+✅ Business-Oriented Visual Design
 
 ---
 
 # Future Improvements
 
-- Advanced player comparison page
-- Predictive analytics
-- Win probability modeling
-- Player clustering
-- Automated data refresh
+- Predictive player performance modeling
+- Team comparison dashboard
+- Win probability analytics
+- Advanced player similarity analysis
+- Automated data refresh pipeline
 
 ---
 
-## Author
+# Author
 
 **Diego Castillo**
 
-Computer Science | Sports Management
+B.S. Computer Science
+
+M.S. Sports Management
 
 Business Intelligence • Data Analytics • Sports Analytics

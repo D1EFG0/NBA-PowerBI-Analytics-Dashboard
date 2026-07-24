@@ -24,9 +24,11 @@ This project demonstrates the complete BI workflow from raw data transformation 
 - [DAX Showcase](#dax-showcase)
 - [Data Preparation and ETL](#data-preparation-and-etl)
 - [Solution Architecture](#solution-architecture)
+- [Technical Highlights](#technical-highlights)
 - [Technologies](#technologies)
 - [Business Questions](#business-questions)
 - [Skills Demonstrated](#skills-demonstrated)
+- [Key Takeaways](#key-takeaways)
 ---
 
 # Dashboard Preview
@@ -371,6 +373,17 @@ The report emphasizes clean design, intuitive navigation, interactive exploratio
 
 ---
 
+## Technical Highlights
+
+- ⭐ Designed a dimensional **star schema** with separate fact and dimension tables to support scalable analytics.
+- ⭐ Developed **20+ custom DAX measures** for KPIs, rankings, efficiency metrics, and dynamic calculations.
+- ⭐ Built an interactive **four-page Power BI dashboard** featuring Executive, Player, Team, and League analysis.
+- ⭐ Created **dynamic executive summaries** using DAX variables, virtual tables, and text generation.
+- ⭐ Implemented **interactive report page tooltips**, slicers, and cross-filtering for enhanced user experience.
+- ⭐ Performed data transformation and modeling using **Power Query** to prepare raw NBA data for analysis.
+- ⭐ Designed business-focused visualizations to communicate player performance, team efficiency, and league trends.
+- ⭐ Optimized calculations using reusable measures and a structured data model for improved report performance.
+
 # Business Questions Answered
 
 - Which team has the highest scoring offense?
@@ -401,6 +414,18 @@ The report emphasizes clean design, intuitive navigation, interactive exploratio
 ✅ Business-Oriented Visual Design
 
 ---
+
+## Key Takeaways
+
+This project strengthened my skills in:
+
+- Designing dimensional data models for analytical reporting.
+- Building reusable and efficient DAX measures.
+- Transforming raw datasets into business-ready models with Power Query.
+- Creating executive dashboards that communicate insights effectively.
+- Applying Business Intelligence best practices to a real-world sports analytics scenario.
+
+
 
 # Future Improvements
 

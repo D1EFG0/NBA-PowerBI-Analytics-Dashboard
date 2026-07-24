@@ -24,6 +24,43 @@ The dashboard is built using a dimensional star schema to support scalable repor
 
 The dashboard uses custom DAX measures to calculate advanced basketball analytics while avoiding duplicate aggregation and ensuring accurate business reporting.
 
+## Data Preparation and ETL
+
+The dashboard uses Power Query to transform raw NBA data into a structured and analysis-ready model.
+
+### Transformation Process
+
+- Imported raw NBA player and game-level statistics.
+- Standardized data types for dates, numeric fields, and percentages.
+- Cleaned inconsistent and duplicate records.
+- Created reusable dimension tables for players, teams, and dates.
+- Built `Fact_Team_Game` to support accurate team-level analysis.
+- Aggregated player-level records into team-game totals where required.
+- Created unique game identifiers to support distinct game counts.
+- Prepared the model for a star-schema reporting structure.
+- Loaded only the fields required for reporting and analysis.
+
+### Why This Matters
+
+The ETL process ensures that calculations are performed at the correct level of detail, reduces duplicate aggregation, and improves consistency across player, team, and league-level reporting.
+
+## Solution Architecture
+
+```text
+Raw NBA Data
+      │
+      ▼
+Power Query Transformations
+      │
+      ▼
+Dimensional Data Model
+      │
+      ▼
+Reusable DAX Measures
+      │
+      ▼
+Interactive Power BI Report
+
 ### Highest Scoring Team
 
 ```DAX

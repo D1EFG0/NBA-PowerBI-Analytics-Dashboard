@@ -10,7 +10,7 @@ This project demonstrates the complete BI workflow from raw data transformation 
 
 ## Executive Dashboard
 
-![Executive Dashboard](images/executive-dashboard.png)
+![Executive Dashboard](images/executive_dashboard.png)
 
 The Executive Dashboard provides a high-level overview of league performance, highlighting the highest-scoring team, best shooting teams, league averages, player totals, and executive insights.
 
@@ -85,7 +85,7 @@ This model separates facts from dimensions, improving report performance, simpli
 
 ## Player Analysis
 
-![Player Analysis](images/player-analysis.png)
+![Player Analysis](images/player_analysis.png)
 
 Analyze individual player performance through interactive filtering, KPIs, and game-by-game scoring trends.
 
@@ -103,7 +103,7 @@ Features include:
 
 ## Team Analysis
 
-![Team Analysis](images/team-analysis.png)
+![Team Analysis](images/team_analysis.png)
 
 Compare every NBA team using interactive team selection, league rankings, and historical scoring trends.
 
@@ -111,7 +111,7 @@ Compare every NBA team using interactive team selection, league rankings, and hi
 
 ## League Analysis
 
-![League Analysis](images/league-analysis.png)
+![League Analysis](images/league_analysis.png)
 
 Explore league-wide relationships using scatter plots, custom report page tooltips, and efficiency rankings.
 
